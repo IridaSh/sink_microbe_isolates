@@ -2,9 +2,9 @@
 This project is designed to analyze data from microbial growth and antibiotic resistance assays. It provides a structured workflow for processing raw data, calculating important metrics, and visualizing results for biological research.
 
 ## File Structure
+```
 SINK_MICROBE_ISOLATES/
 │
-|
 ├── growth_assay/          # Contains data related to microbial growth assays
 │   ├── extracted_data/    # Processed and extracted growth assay data
 │   ├── Growth Data/       # Raw growth data files
@@ -17,6 +17,7 @@ SINK_MICROBE_ISOLATES/
 │   ├── 20241115_Sink_Isolates_AR... # (More raw data files)
 │
 ├── process_ar_data.py     # Python script for processing resistance data
+```
 
 ## Scripts
 This script processes antibiotic resistance data stored in the resistance_assay folder. It dynamically detects tables in each Excel sheet, calculates metrics, and determines resistance status (Yes/No).
@@ -29,6 +30,9 @@ source .venv/bin/activate
 python process_ar_data.py <resistance_folder> [--threshold <value>]
 ```
 ### Arguments
-<resistance_folder>: Path to the folder containing Excel files (e.g., resistance_assay).
---threshold: Optional. Sets the resistance threshold (default: 0.1).
+- `<resistance_folder>`:  
+  Path to the folder containing Excel files (e.g., `resistance_assay`).
+
+- `--threshold`:  
+  *(Optional)* Sets the resistance threshold (default: `0.1`).
 
